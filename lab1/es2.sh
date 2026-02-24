@@ -1,6 +1,6 @@
 # create namespace
-sudo ipnets add H1
-sudo ipnets add H2
+sudo ip netns add H1
+sudo ip netns add H2
 
 # create bridge
 sudo ip link add SW1 type bridge

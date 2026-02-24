@@ -1,6 +1,6 @@
 # create namespace
-sudo ipnets add H1
-sudo ipnets add H2
+sudo ip netns add H1
+sudo ip netns add H2
 
 # create veths and attach to namespace
 sudo ip link add veth1 type veth peer name veth2
