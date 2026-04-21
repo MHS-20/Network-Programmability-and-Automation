@@ -310,14 +310,14 @@ control MyIngress(inout headers hdr,
 
     table modbus_sec {
         key = {
-            standard_metadata.egress_spec: exact;
+             hdr.ipv4.dstAddr: exact;
         }
         actions = {
             no_cipher;
             cipher;
             decipher;
         }
-        size = 2;
+        size = 16;
         default_action = no_cipher();
     }
 
